@@ -1,0 +1,64 @@
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #E0E0E0;
+        background-image: url('https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images-1536x1024.jpg');
+        background-size: cover;
+        font-size: large;
+        box-sizing: border-box;
+        line-height: 1.6;
+      }
+      img {
+        width: 100px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 30px; 
+        margin-top: 30px;
+        margin-bottom: 200px;
+      }
+      .container header h1 {
+        text-align: center;
+        color: #FDD835;
+    }
+      h2 {
+        color: #A5D6A7;
+      }
+      strong {
+        color: crimson;
+      }
+      .container {
+        max-width: 750px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 10px auto;  
+      }
+      a{
+        color: #64B5F6 ;
+        text-decoration: none;
+      }
+      a:hover{
+        color: blue;
+      }
+      #weather_widget {
+        max-width: 400px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: auto;
+      }
+      .map_widget{
+        max-width: 425px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 10px auto;
+      }      
+ 
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY INTRODUCTION PAGE!!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to My Introduction Page!</h1>
+      </header>
+
+      <main>
+        <section>
+          <img src="images/Me.jpg" alt="A picture of Me." />
+          <h2>About Me.</h2>
+          <p>
+            Hello! My name is <strong>Kushal Paidisetty</strong> and I am a
+            student from the department of Civil Engineering in IIT Madras. I
+            was born and brought up in Bangalore and my Mothertongue is Telugu.
+          </p>
+        </section>
+        <section>
+          <h2>My Hobbies.</h2>
+          <ul>
+            <li>I like watching movies, shows, anime whenever I am free.</li>
+            <li>
+              I like games when movies become boring or whenever I want to play
+              with my friends.
+            </li>
+            <li>I also like to learn new stuff which I am interested in.</li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <section>
+          <h2>Contact Me.</h2>
+          <p>Feel free to DM me on Whatsapp, Instagram and also on Email.</p>
+        </section>
+        <ul>
+          <li><strong>Whatsapp Number</strong> - 8073390864</li>
+          <li>
+            <strong>Instagram</strong> -
+            <a
+              href="https://www.instagram.com/masterchief_2367/"
+              target="_blank"
+              >@masterchief_2367</a
+            >
+          </li>
+          <li>
+            <strong>Email</strong> -
+            <a href="mailto:ce25b070@smail.iitm.ac.in" target="_blank"
+              >ce25b070@smail.iitm.ac.in</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <div id="weather_widget">
+      <h2>Current Weather in Bangalore</h2>
+      <p class="temp"><strong>Temperature: </strong>Checking..</p>
+      <p class="cond"><strong>Condition: </strong>Checking..</p>
+      <p class="humidity"><strong>Humidity: </strong>Checking..</p>
+      <script>
+        const apiUrl =
+          "https://api.weatherapi.com/v1/current.json?key=9c7f3d36bce74e56b33172109250212&q=Bangalore&aqi=no";
+        async function fetchWeather() {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          console.log(data);
+          document.querySelector(".temp").innerHTML =
+            "<strong>Temperature: </strong>" + data.current.temp_c + " °C";
+          document.querySelector(".cond").innerHTML =
+            "<strong>Condition: </strong>" + data.current.condition.text;
+          document.querySelector(".humidity").innerHTML =
+            "<strong>Humidity: </strong>" + data.current.humidity + " %";
+        }
+        fetchWeather();
+      </script>
+    </div>
+    <div class="map_widget">
+      <h2>My Location - Bangalore, India</h2>
+      <iframe
+        width="425"
+        height="350"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=77.70045161247253%2C12.960232865738012%2C77.7039009332657%2C12.96211746775631&amp;layer=mapnik&amp;marker=12.961176475466758%2C77.70217627286911"
+        style="border: 1px solid black"
+      ></iframe
+      ><br /><small
+        ><a
+          href="https://www.openstreetmap.org/?mlat=12.961176&amp;mlon=77.702176#map=19/12.961175/77.702176&amp;layers=N"
+          >View Larger Map</a
+        ></small
+      >
+    </div>
+  </body>
+</html>
